@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for animation */
+        @keyframes slideInRight {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        .welcome-text {
+            animation: slideInRight 1s ease-out;
+        }
+
+        /* Additional styles for navigation */
+        header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 10;
+            margin: 0;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        header nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 120px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Additional styles for the about section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .about-image {
+            flex: 1;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .about-text {
+            flex: 2;
+            padding-left: 20px; /* Adjust padding for spacing between image and text */
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            margin-right: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button-container button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>KYLE.</li>
+            </ul>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="#about">About</a>
+                    <div class="dropdown-content">
+                        <a href="SocialMedia.html">Social Media</a>
+                    </div>
+                </li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <div class="welcome-container">
+            <img src="5.jpg" alt="Profile Picture" class="profile-pic">
+            <div class="welcome-text">
+                <div class="text-content">
+                    <h1>Welcome to My Website!</h1>
+                    <br>
+                    <p>I'm Kyle Cervantes</p>
+                    <p>Website Developer</p>
+                </div>
+                <div class="button-container">
+                    <button onclick="hireMe()">Hire Me</button>
+                    <button onclick="learnMore()">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="kk.jpg" alt="Kyle Cervantes">
+            </div>
+            <div class="about-text">
+                <p>Hello! My name is KYLE CERVANTES, and I am excited to share a bit about myself.<br>
+                   I studied Computer Science at NEMSU MAIN, where I gained a solid foundation in HTML,
+                   <br>CSS, AND JAVASCRIPT. My time at university was filled with valuable experiences, 
+                   <br>both academically and socially, which helped shape who I am today.Outside of work, 
+                   <br>I enjoy Playing DOTA. Then I love listening music,I find it important to balance my 
+                   <br>professional life with activities that bring me joy and relaxation.</p>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <h2>My Work</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="1.jpg" alt="Project 1">
+                <p>Project 1</p>
+            </div>
+            <div class="gallery-item">
+                <img src="2.jpg" alt="Project 2">
+                <p>Project 2</p>
+            </div>
+            <div class="gallery-item">
+                <img src="3.jpg" alt="Project 3">
+                <p>Project 3</p>
+            </div>
+            <div class="gallery-item">
+                <img src="4.jpg" alt="Project 4">
+                <p>Project 4</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Kylestone. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        function hireMe() {
+            alert("Please contact me for hiring inquiries!");
+            // You can also redirect to a hiring page or perform other actions here
+        }
+
+        function learnMore() {
+            // Scroll to the about section or perform other actions
+            document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>

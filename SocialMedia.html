@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Icons</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000411; /* Background color for the whole page */
+            color: #fff; /* Text color */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            background-color: #313837;
+        }
+
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            background-color: #1f2024; /* Background color for the icon container */
+            border-radius: 10px; /* Add border radius for container */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for a bit depth */
+        }
+
+        .social-icons li {
+            margin-right: 10px;
+        }
+
+        .social-icons li:last-child {
+            margin-right: 0;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #1f2024;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            background-color: #666;
+        }
+
+        /* Define your social media icons here */
+        .social-icons .facebook {
+            background-image: url('facebook.jpg');
+            background-size: cover;
+        }
+        .social-icons .instagram {
+            background-image: url('instagram.jpg');
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Please Select:</h1>
+    <ul class="social-icons">
+        <li><a href="https://www.facebook.com/Cervantes.Kylestone" class="facebook"></a></li>
+        <li><a href="https://www.instagram.com/its_kylcrvnts?igsh=MWI1c3dhcm5uNmJ6cQ==" class="instagram"></a></li>
+    </ul>
+</body>
+</html>
+
